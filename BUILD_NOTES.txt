@@ -1,0 +1,7 @@
+សម្រាប់បង្កើត 64-bit EXE សូមប្រើ Python 3.8.10 64-bit លើ Windows 64-bit។
+សម្រាប់ 32-bit EXE សូមប្រើ Python 3.8.10 32-bit ហើយ build លើ Windows ដែលអាចដំណើរការ Python 32-bit បាន។
+កុំចម្លង EXE មួយទៅគ្រប់ architecture ដោយមិនសាកល្បង។
+
+Custom logo:
+- pdf_page_swapper.ico is embedded in the EXE and bundled for the app window.
+- Inno Setup uses the same icon for the installer and shortcuts.

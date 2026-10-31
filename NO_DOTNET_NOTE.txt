@@ -1,0 +1,5 @@
+សំខាន់៖ PDF Page Swapper មិនត្រូវការ .NET Framework ទេ។
+EXE ដែលបាន Build ដោយ PyInstaller មាន Python runtime និងបណ្ណាល័យចាំបាច់ភ្ជាប់មកជាមួយ។
+កុំព្យូទ័រដែលយកទៅប្រើមិនចាំបាច់ដំឡើង Python, .NET Framework ឬ pypdf ដាច់ដោយឡែកទេ។
+ត្រូវ Build EXE ជាមុនលើកុំព្យូទ័រអ្នកអភិវឌ្ឍន៍។
+ការគាំទ្រ Windows ចាស់ៗត្រូវសាកល្បងលើ Windows version និង architecture ពិតប្រាកដ។

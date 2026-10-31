@@ -1,0 +1,34 @@
+PDF PAGE SWAPPER — BUILD តាម CLOUD ដោយមិនប្រើ CMD លើកុំព្យូទ័រអ្នក
+
+អ្វីដែលត្រូវដឹង
+- ZIP នេះមាន Project និងការកំណត់ GitHub Actions សម្រាប់ Build នៅលើ Windows Cloud។
+- វាមិនទាន់មាន EXE ដែលបាន Compile រួចទេ។
+- ត្រូវមានគណនី GitHub និងអ៊ីនធឺណិត ដើម្បីឱ្យ Cloud Build ដំណើរការ។
+- កុំព្យូទ័រអ្នកមិនចាំបាច់បើក CMD ឬដំឡើង Python ដើម្បី Build ទេ។
+
+ជំហានធ្វើតាម
+1. ទាញយក ZIP នេះ ហើយ Extract All។
+2. ចូល https://github.com ហើយ Sign in ឬបង្កើតគណនី។
+3. ចុច New repository ដាក់ឈ្មោះ PDF-Page-Swapper ហើយជ្រើស Private។
+4. ចូល Repository នោះ ចុច Add file > Upload files។
+5. បើក Folder PDF_Page_Swapper_Project ដែលបាន Extract ហើយ Upload ឯកសារ និង Folder ទាំងអស់នៅក្នុងនោះ។
+   សំខាន់៖ ត្រូវ Upload folder .github ផងដែរ។ បើ File Explorer លាក់វា សូមបើក View > Show > Hidden items។
+6. ចុច Commit changes។
+7. ចូលផ្ទាំង Actions របស់ Repository។
+8. ជ្រើស "Build PDF Page Swapper for Windows"។
+9. ចុច Run workflow > Run workflow ហើយរង់ចាំឱ្យមានសញ្ញាបៃតង។
+10. បើ Build ជោគជ័យ ចូល Workflow run នោះ ហើយចុច Artifact "PDF_Page_Swapper_Windows_Installer" ដើម្បីទាញយក ZIP។
+
+ក្នុង ZIP លទ្ធផលនឹងមាន៖
+- PDF_Page_Swapper_Setup.exe — Installer
+- PDF_Page_Swapper.exe — Portable
+- README_KH.txt — សេចក្តីណែនាំ
+
+បើមានសញ្ញាក្រហម ឬ Build failed
+- សូមថត Screenshot ផ្ទាំង Actions ដែលមាន Error ផ្ញើមក ChatGPT ដើម្បីជួយកែ។
+- កុំផ្ញើ Password ឬ Token របស់ GitHub ទៅនរណាម្នាក់។
+
+ចំណាំ
+- Cloud build នេះកំណត់គោលដៅ Windows x64។
+- Windows 7/8/8.1 ត្រូវសាកល្បងជាក់ស្តែង មុនធានាថាដំណើរការ។
+- Installer/EXE មិនទាន់បានបង្កើតទេ រហូតដល់ GitHub Actions រត់ជោគជ័យ។
