@@ -25,4 +25,4 @@ Name: "{group}\PDF Page Swapper"; Filename: "{app}\PDF_Page_Swapper.exe"; IconFi
 Name: "{autodesktop}\PDF Page Swapper"; Filename: "{app}\PDF_Page_Swapper.exe"; IconFilename: "{app}\PDF_Page_Swapper.exe"; Tasks: desktopicon
 
 [Run]
-Filename: "{app}\PDF_Page_Swapper.exe"; IconFilename: "{app}\PDF_Page_Swapper.exe"; Description: "Launch PDF Page Swapper"; Flags: postinstall nowait skipifsilent
+Filename: "{app}\PDF_Page_Swapper.exe"; Description: "Launch PDF Page Swapper"; Flags: postinstall nowait skipifsilent
