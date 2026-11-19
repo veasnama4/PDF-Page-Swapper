@@ -1,0 +1,50 @@
+
+name: Build Windows
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: windows-2022
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.8'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+          pip install pyinstaller==5.13.2
+
+      - name: Build Portable EXE
+        run: |
+          pyinstaller --noconfirm --clean --onefile --windowed --name PDF_Page_Swapper --icon pdf_page_swapper.ico pdf_page_swapper.py
+
+      - name: Install Inno Setup
+        run: choco install innosetup --yes --no-progress
+
+      - name: Build Installer
+        run: |
+          & "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer.iss
+
+      - name: Upload Portable EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF_Page_Swapper_Portable
+          path: dist/PDF_Page_Swapper.exe
+
+      - name: Upload Installer
+        uses: actions/upload-artifact@v4
+        with:
+          name: PDF_Page_Swapper_Installer
+          path: Output/PDF_Page_Swapper_Setup.exe
